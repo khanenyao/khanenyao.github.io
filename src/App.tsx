@@ -33,9 +33,9 @@ const data = {
     date: "2022 - Current",
   },
   lastDegree: {
-    name: "University of California, Berkeley",
-    description: "B.A. in Computer Science",
-    date: "2017 - 2021",
+    name: "University of Pardubice",
+    description: "Bachelor's degree, Information Technology",
+    date: "2013 - 2017",
     imageUrl: "https://www.upce.cz/sites/default/files/themes/upce/logo.svg",
   },
   sections: [
@@ -141,14 +141,18 @@ const App: Component = () => {
                     name={data.currentWorkplace.name}
                     date={data.currentWorkplace.date}
                     description={data.currentWorkplace.description}
-                    imageFallback={data.currentWorkplace.name.slice(0, 2)}
+                    imageFallback={data.currentWorkplace.name
+                      .slice(0, 2)
+                      .toUpperCase()}
                   />
 
                   <Activity
                     name={data.lastDegree.name}
                     date={data.lastDegree.date}
                     description={data.lastDegree.description}
-                    imageFallback={data.lastDegree.name.slice(0, 2)}
+                    imageFallback={data.lastDegree.name
+                      .slice(0, 2)
+                      .toUpperCase()}
                     imageUrl={data.lastDegree.imageUrl}
                   />
                 </div>
