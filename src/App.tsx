@@ -126,7 +126,7 @@ const App: Component = () => {
               </CardHeader>
             </Card>
 
-            <Tabs defaultValue="resume">
+            <Tabs defaultValue="about-me">
               <TabsList class="grid w-full grid-cols-2">
                 <TabsTrigger value="about-me">About me</TabsTrigger>
                 <TabsTrigger value="resume">Resume</TabsTrigger>
