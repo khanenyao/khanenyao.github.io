@@ -25,12 +25,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 const data = {
   name: "Orest Khanenya",
-  title: "Software Engineer",
-  description: `I’m a Software Developer based in the Czech Republic, I bring extensive experience in web development to every project I work on. With fluency in Russian, Czech, and English, I am able to effectively communicate and collaborate with colleagues and clients around the world. I earned my Bachelor's degree in Information Technology from the University of Pardubice and have honed my skills through professional experience at companies such as CGI, eMan, and Ceros. In addition to my full-time work, I also enjoy contributing to the team at Muj Fresh as a part-time Frontend Developer.`,
+  title: "Senior Software Engineer",
+  description: `Hey there! 👋 \n\nI'm Orest, a Software Engineer with a knack for creating awesome tech solutions.\n\nCurrently, I'm diving into an exciting project at Langtail, where we're cooking up some seriously cool stuff.\n\nWith my previous experience at CGI, eMan, and Ceros under my belt, I'm all set to tackle whatever comes our way.\n\nLet's build something awesome together! 🚀`,
   currentWorkplace: {
-    name: "Ceros",
-    description: "Senior Software Developer",
-    date: "2022 - Current",
+    name: "Langtail",
+    description: "Senior Software Engineer",
+    date: "2024 - Current",
+    imageUrl:
+      "https://ph-files.imgix.net/ca63d958-71de-4a1f-aac9-54c475d86fb8.png",
   },
   lastDegree: {
     name: "University of Pardubice",
@@ -111,8 +113,8 @@ const App: Component = () => {
                       <div>{data.title}</div>
                       <span>
                         at{" "}
-                        <a href="https://ceros.com" target="_blank">
-                          @ceros
+                        <a href="https://langtail.com/" target="_blank">
+                          @langtail
                         </a>
                       </span>
                     </CardDescription>
@@ -132,7 +134,9 @@ const App: Component = () => {
 
               <TabsContent class="m-0" value="about-me">
                 <Card class="mt-4">
-                  <CardContent class="p-4">{data.description}</CardContent>
+                  <CardContent class="p-4">
+                    <p class="whitespace-pre-wrap p-2">{data.description}</p>
+                  </CardContent>
                 </Card>
               </TabsContent>
               <TabsContent class="m-0" value="resume">
@@ -144,6 +148,7 @@ const App: Component = () => {
                     imageFallback={data.currentWorkplace.name
                       .slice(0, 2)
                       .toUpperCase()}
+                    imageUrl={data.currentWorkplace.imageUrl}
                   />
 
                   <Activity
